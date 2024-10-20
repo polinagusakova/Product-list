@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Main from './components/Main';
+import { Reset } from 'styled-reset';
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`
+  body{
+    font-family: "Red Hat Text", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    background-color: hsl(20, 50%, 98%);
+  }
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Reset></Reset>
+      <GlobalStyle/>
+      <Main></Main>
+    </>
+    
   );
 }
 
